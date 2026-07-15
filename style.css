@@ -58,6 +58,20 @@ img,svg{display:block;}
     align-items:center;
     z-index:999;
 
+    transition: all .3s ease;
+}
+
+.header.scrolled{
+  background: rgba(15, 15, 15, 0.35);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, .08);
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, .25);
+
+  border-radius: 20px;
 }
 
 .container {
