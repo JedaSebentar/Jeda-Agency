@@ -27,3 +27,11 @@ const header = document.querySelector('.header');
 window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 40);
 });
+
+const loader=document.getElementById("loader");
+
+window.addEventListener("load",() => {
+  setTimeout(() => {
+    loader.classList.add("hide");
+  },1000);
+});
