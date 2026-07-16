@@ -35,3 +35,23 @@ window.addEventListener("load",() => {
     loader.classList.add("hide");
   },1000);
 });
+
+document.querySelectorAll("a").forEach(link => {
+
+    link.addEventListener("click", function(e){
+
+        if(this.hostname !== window.location.hostname) return;
+
+        e.preventDefault();
+
+        loader.classList.remove("hide");
+
+        setTimeout(() => {
+
+            window.location.href = this.href;
+
+        },600);
+
+    });
+
+});
