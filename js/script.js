@@ -21,3 +21,9 @@ window.addEventListener("scroll", function() {
     header.classList.remove("scrolled");
   }
 });
+
+// Header berubah gaya saat halaman di-scroll
+const header = document.querySelector('.header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 40);
+});
