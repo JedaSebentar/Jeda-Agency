@@ -55,3 +55,29 @@ document.querySelectorAll("a").forEach(link => {
     });
 
 });
+
+const toolCards = document.querySelectorAll(".tool-card");
+
+const toolObserver = new IntersectionObserver((entries)=>{
+
+    entries.forEach((entry)=>{
+
+        if(entry.isIntersecting){
+
+            const index=[...toolCards].indexOf(entry.target);
+
+            setTimeout(()=>{
+
+                entry.target.classList.add("show");
+
+            },index*120);
+
+        }
+
+    });
+
+},{
+    threshold:.2
+});
+
+toolCards.forEach(card=>toolObserver.observe(card));

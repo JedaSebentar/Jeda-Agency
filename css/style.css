@@ -261,6 +261,7 @@ img,svg{display:block;}
   display:flex;gap:1rem;flex-shrink:0;
   align-items:center;
 }
+
 .btn-solid{
   font-family:'JetBrains Mono',monospace;
   font-size:0.78rem;

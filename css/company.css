@@ -1,0 +1,1133 @@
+/* =======================================================
+   COMPANY PAGE
+   Design System mengikuti style.css
+======================================================= */
+
+
+/* =======================================================
+   HERO
+======================================================= */
+
+.company-hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:10rem clamp(1.5rem,5vw,4rem) 5rem;
+    overflow:hidden;
+}
+
+.company-hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at center,
+        rgba(200,183,156,.08),
+        transparent 60%);
+    pointer-events:none;
+}
+
+.company-hero-content{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+}
+
+.company-hero .eyebrow{
+    margin-bottom:18px;
+    display:inline-block;
+}
+
+.company-hero h1{
+
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    font-size:clamp(2.8rem,6vw,5.5rem);
+    line-height:1.08;
+    color:var(--white);
+    letter-spacing:-0.02em;
+}
+
+.company-hero p{
+
+    margin:2rem auto 0;
+    max-width:700px;
+    color:var(--cream);
+    opacity:.72;
+    font-size:1rem;
+    line-height:1.8;
+
+}
+
+
+/* =======================================================
+   ABOUT
+======================================================= */
+
+.about-company{
+
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:5rem;
+    align-items:start;
+
+}
+
+.about-content{
+
+    border-left:1px solid var(--line);
+    padding-left:3rem;
+
+}
+
+.about-content p{
+
+    color:var(--cream);
+    opacity:.72;
+    font-size:.96rem;
+    line-height:1.9;
+    margin-bottom:1.6rem;
+
+}
+
+.about-content p:last-child{
+
+    margin-bottom:0;
+
+}
+
+
+/* =======================================================
+   SECTION TITLE
+======================================================= */
+
+.section-title span{
+
+    font-family:'JetBrains Mono',monospace;
+    font-size:.72rem;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--tan);
+    display:block;
+    margin-bottom:1rem;
+
+}
+
+.section-title h2{
+
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    font-size:clamp(2rem,3.5vw,2.9rem);
+    line-height:1.15;
+    color:var(--white);
+
+}
+
+
+/* =======================================================
+   VISION & MISSION
+======================================================= */
+
+.vision-mission{
+
+    padding-top:2rem;
+
+}
+
+.vm-grid{
+
+    margin-top:3.5rem;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+
+}
+
+.vm-card{
+
+    background:var(--black);
+    padding:2.5rem;
+    transition:.35s ease;
+
+}
+
+.vm-card:hover{
+
+    background:var(--black-card);
+
+}
+
+.vm-card h3{
+
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    font-size:1.5rem;
+    color:var(--white);
+    margin-bottom:1.2rem;
+
+}
+
+.vm-card p{
+
+    color:var(--cream);
+    opacity:.68;
+    line-height:1.8;
+    font-size:.95rem;
+
+}
+
+.vm-card ul{
+
+    margin-top:1rem;
+    padding-left:1.2rem;
+
+}
+
+.vm-card li{
+
+    margin:.8rem 0;
+    color:var(--cream);
+    opacity:.68;
+    line-height:1.8;
+    font-size:.95rem;
+
+}
+
+
+/* =======================================================
+   VALUES
+======================================================= */
+
+.values{
+
+    padding-top:2rem;
+
+}
+
+.values-grid{
+
+    margin-top:3.5rem;
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+
+    gap:1px;
+
+    background:var(--line);
+
+    border:1px solid var(--line);
+
+}
+
+.value-card{
+
+    background:var(--black);
+
+    padding:2.5rem;
+
+    transition:.35s ease;
+
+}
+
+.value-card:hover{
+
+    background:var(--black-card);
+
+}
+
+.value-card h3{
+
+    font-family:'Fraunces',serif;
+
+    font-weight:500;
+
+    font-size:1.45rem;
+
+    color:var(--white);
+
+    margin-bottom:1rem;
+
+}
+
+.value-card p{
+
+    color:var(--cream);
+
+    opacity:.68;
+
+    line-height:1.8;
+
+    font-size:.95rem;
+
+}
+
+
+/* =======================================================
+   RESPONSIVE
+======================================================= */
+
+@media (max-width:900px){
+
+    .about-company{
+
+        grid-template-columns:1fr;
+        gap:3rem;
+
+    }
+
+    .about-content{
+
+        border-left:none;
+        border-top:1px solid var(--line);
+        padding-left:0;
+        padding-top:2rem;
+
+    }
+
+    .vm-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .values-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media (max-width:700px){
+
+    .company-hero{
+
+        padding:9rem 1.5rem 4rem;
+
+    }
+
+    .company-hero h1{
+
+        font-size:clamp(2.4rem,9vw,3.8rem);
+
+    }
+
+    .company-hero p{
+
+        font-size:.95rem;
+
+    }
+
+    .vm-card,
+    .value-card{
+
+        padding:2rem;
+
+    }
+
+}
+
+/* =======================================================
+   PROCESS
+======================================================= */
+
+.company-process{
+    padding-top:2rem;
+}
+
+.timeline{
+    margin-top:3.5rem;
+    display:flex;
+    flex-direction:column;
+    border-top:1px solid var(--line);
+}
+
+.step{
+    display:grid;
+    grid-template-columns:80px 1fr 1.6fr;
+    gap:2rem;
+    align-items:center;
+    padding:2rem 0;
+    border-bottom:1px solid var(--line);
+    transition:padding-left .35s ease;
+}
+
+.step:hover{
+    padding-left:.8rem;
+}
+
+.step span{
+    font-family:'JetBrains Mono',monospace;
+    font-size:.85rem;
+    color:var(--tan-dim);
+}
+
+.step h3{
+    font-family:'Fraunces',serif;
+    font-weight:500;
+    font-size:1.35rem;
+    color:var(--white);
+}
+
+.step p{
+    font-size:.92rem;
+    line-height:1.7;
+    color:var(--cream);
+    opacity:.68;
+}
+
+.line{
+    display:none;
+}
+
+
+/* =======================================================
+   NUMBERS
+======================================================= */
+
+.numbers{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:2rem;
+
+    padding-top:5rem;
+    padding-bottom:5rem;
+
+    border-top:1px solid var(--line);
+
+}
+
+.number-card{
+
+    text-align:left;
+
+}
+
+.number-card h2{
+
+    font-family:'Fraunces',serif;
+    font-weight:400;
+    font-size:clamp(2.3rem,4vw,3.2rem);
+
+    color:var(--tan);
+
+    margin-bottom:.8rem;
+
+}
+
+.number-card span{
+
+    display:block;
+
+    font-family:'JetBrains Mono',monospace;
+
+    font-size:.72rem;
+
+    letter-spacing:.1em;
+
+    text-transform:uppercase;
+
+    color:var(--cream);
+
+    opacity:.55;
+
+}
+
+
+/* =======================================================
+   WHY CHOOSE US
+======================================================= */
+
+.why-us{
+    padding-top:2rem;
+}
+
+.why-grid{
+
+    margin-top:3.5rem;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:1px;
+
+    background:var(--line);
+
+    border:1px solid var(--line);
+
+}
+
+.why-card{
+
+    background:var(--black);
+
+    padding:2.4rem;
+
+    min-height:220px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    transition:.35s ease;
+
+}
+
+.why-card:hover{
+
+    background:var(--black-card);
+
+}
+
+.why-card h3{
+
+    font-family:'Fraunces',serif;
+
+    font-weight:500;
+
+    font-size:1.35rem;
+
+    color:var(--white);
+
+    margin-bottom:1rem;
+
+}
+
+.why-card p{
+
+    color:var(--cream);
+
+    opacity:.68;
+
+    line-height:1.8;
+
+    font-size:.92rem;
+
+}
+
+
+/* =======================================================
+   TEAM
+======================================================= */
+
+.team{
+
+    padding-top:2rem;
+
+}
+
+.team-grid{
+
+    margin-top:3.5rem;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:1px;
+
+    background:var(--line);
+
+    border:1px solid var(--line);
+
+}
+
+.team-card{
+
+    background:var(--black);
+
+    padding:2.5rem;
+
+    min-height:260px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    transition:.35s ease;
+
+}
+
+.team-card:hover{
+
+    background:var(--black-card);
+
+}
+
+.team-card h3{
+
+    font-family:'Fraunces',serif;
+
+    font-weight:500;
+
+    font-size:1.45rem;
+
+    color:var(--white);
+
+    margin-bottom:.7rem;
+
+}
+
+.team-card p{
+
+    color:var(--cream);
+
+    opacity:.68;
+
+    line-height:1.7;
+
+    font-size:.92rem;
+
+}
+
+.team-card.join{
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.team-card.join h3{
+
+    color:var(--tan);
+
+    margin-bottom:0;
+
+}
+
+
+/* =======================================================
+   RESPONSIVE
+======================================================= */
+
+@media (max-width:900px){
+
+    .step{
+
+        grid-template-columns:60px 1fr;
+
+    }
+
+    .step p{
+
+        grid-column:1/-1;
+
+    }
+
+    .numbers{
+
+        grid-template-columns:repeat(2,1fr);
+
+        row-gap:2.5rem;
+
+    }
+
+    .why-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .team-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media (max-width:700px){
+
+    .step{
+
+        grid-template-columns:1fr;
+
+        gap:.8rem;
+
+    }
+
+    .step span{
+
+        margin-bottom:.5rem;
+
+    }
+
+    .numbers{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .why-card,
+
+    .team-card{
+
+        padding:2rem;
+
+    }
+
+}
+/* =======================================================
+   TOOLS WE USE
+======================================================= */
+
+.tools{
+    position:relative;
+}
+
+.tools-grid{
+
+    margin-top:4rem;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:1.5rem;
+
+}
+
+.tool-card{
+
+    position:relative;
+
+    background:var(--black);
+
+    border:1px solid var(--line);
+
+    min-height:240px;
+
+    padding:2rem;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    overflow:hidden;
+
+    transition:
+        transform .45s ease,
+        border-color .45s ease,
+        background .45s ease,
+        box-shadow .45s ease;
+
+}
+
+.tool-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    top:-120px;
+
+    right:-120px;
+
+    background:radial-gradient(
+        circle,
+        rgba(200,183,156,.10),
+        transparent 70%
+    );
+
+    opacity:0;
+
+    transition:.45s;
+
+}
+
+.tool-card::after{
+
+    content:"↗";
+
+    position:absolute;
+
+    top:28px;
+
+    right:28px;
+
+    font-size:1rem;
+
+    color:var(--tan);
+
+    opacity:0;
+
+    transform:translate(-10px,10px);
+
+    transition:.35s;
+
+}
+
+.tool-card:hover{
+
+    transform:translateY(-10px);
+
+    background:var(--black-card);
+
+    border-color:rgba(200,183,156,.35);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.25);
+
+}
+
+.tool-card:hover::before{
+
+    opacity:1;
+
+}
+
+.tool-card:hover::after{
+
+    opacity:1;
+
+    transform:none;
+
+}
+
+.tool-icon{
+
+    width:72px;
+
+    height:72px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:2rem;
+
+    border:1px solid var(--line);
+
+    border-radius:18px;
+
+    color:var(--tan);
+
+    font-size:2rem;
+
+    transition:.45s;
+
+}
+
+.tool-card:hover .tool-icon{
+
+    transform:scale(1.08) rotate(-6deg);
+
+    border-color:rgba(200,183,156,.4);
+
+    background:rgba(200,183,156,.05);
+
+}
+
+.tool-card h3{
+
+    font-family:'Fraunces',serif;
+
+    font-size:1.5rem;
+
+    font-weight:500;
+
+    color:var(--white);
+
+    margin-bottom:.6rem;
+
+}
+
+.tool-card p{
+
+    color:var(--cream);
+
+    opacity:.68;
+
+    line-height:1.7;
+
+    font-size:.92rem;
+
+}
+
+
+/* reveal animation */
+
+.tool-card{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+}
+
+.tool-card.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/* responsive */
+
+@media(max-width:900px){
+
+    .tools-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:650px){
+
+    .tools-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/* =======================================================
+   FAQ
+======================================================= */
+
+.faq{
+
+    padding-top:2rem;
+
+}
+
+.faq-list{
+
+    margin-top:3.5rem;
+
+    border-top:1px solid var(--line);
+
+}
+
+.faq-item{
+
+    border-bottom:1px solid var(--line);
+
+}
+
+.faq-question{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:1.8rem 0;
+
+    background:none;
+
+    border:none;
+
+    color:var(--white);
+
+    cursor:pointer;
+
+    font-family:'Fraunces',serif;
+
+    font-size:1.3rem;
+
+    text-align:left;
+
+    transition:.3s;
+
+}
+
+.faq-question:hover{
+
+    color:var(--tan);
+
+}
+
+.faq-question span{
+
+    font-family:'JetBrains Mono',monospace;
+
+    color:var(--tan);
+
+    font-size:1.2rem;
+
+}
+
+.faq-answer{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .4s ease;
+
+}
+
+.faq-answer p{
+
+    padding:0 0 1.8rem;
+
+    color:var(--cream);
+
+    opacity:.7;
+
+    line-height:1.8;
+
+    max-width:70ch;
+
+}
+
+
+/* Active */
+
+.faq-item.active .faq-answer{
+
+    max-height:400px;
+
+}
+
+.faq-item.active .faq-question{
+
+    color:var(--tan);
+
+}
+
+
+/* =======================================================
+   START YOUR JOURNEY
+======================================================= */
+
+.company-cta{
+
+    text-align:center;
+
+    padding:7rem clamp(1.5rem,5vw,4rem);
+
+    border-top:1px solid var(--line);
+
+    border-bottom:1px solid var(--line);
+
+}
+
+.company-cta .eyebrow{
+
+    display:inline-block;
+
+    margin-bottom:1.2rem;
+
+}
+
+.company-cta h2{
+
+    font-family:'Fraunces',serif;
+
+    font-weight:500;
+
+    font-size:clamp(2.5rem,6vw,4.5rem);
+
+    color:var(--white);
+
+    line-height:1.1;
+
+    max-width:14ch;
+
+    margin:0 auto 1.5rem;
+
+}
+
+.company-cta p{
+
+    max-width:650px;
+
+    margin:0 auto 2.5rem;
+
+    color:var(--cream);
+
+    opacity:.72;
+
+    line-height:1.8;
+
+}
+
+.company-cta .cta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:1rem;
+
+    flex-wrap:wrap;
+
+}
+
+
+/* =======================================================
+   RESPONSIVE
+======================================================= */
+
+@media (max-width:900px){
+
+    .tools-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:700px){
+
+    .tools-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .faq-question{
+
+        font-size:1.1rem;
+
+    }
+
+    .company-cta{
+
+        padding:5rem 1.5rem;
+
+    }
+
+    .company-cta h2{
+
+        font-size:clamp(2.2rem,10vw,3.5rem);
+
+    }
+
+}
