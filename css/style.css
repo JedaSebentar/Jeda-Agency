@@ -77,10 +77,10 @@ img,svg{display:block;}
     height: 90px;
     display:flex;
     position:fixed;
-    top:25px;
+    top:0px;
     left:0;
     right:0;
-    justify-content:space-between;
+    justify-content:center;
     align-items:center;
     z-index:999;
 
@@ -103,7 +103,7 @@ img,svg{display:block;}
 .container {
   width: 90%;
   max-width: 1500px;
-  margin: auto;
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
